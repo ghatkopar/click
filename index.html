@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click this</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #ffdddd;
+            height: 150px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+        h1 {
+            color: #b3003b;
+            margin-top: 50px;
+        }
+        .balloons {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-grow: 1;
+            position: relative;
+        }
+        .balloons img {
+            width: 300px;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            animation: pop-up 1.5s ease-out forwards, hover 3s infinite ease-in-out;
+            opacity: 0;
+        }
+        @keyframes pop-up {
+            from {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes hover {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-70px); }
+            100% { transform: translateY(0); }
+        }
+        .button-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .next-button {
+            background-color: #42b8dd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <h1>Happy Women’s Day <br> Pookoo :)</h1>
+    <div class="balloons">
+        <img src="/images/balloons.png" alt="Balloons">
+    </div>
+    <div class="button-container">
+        <a href="about.html" class="next-button">Go on ></a>
+    </div>
+</body>
+</html>

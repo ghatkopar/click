@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiration Page</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            max-height: 926px;
+            overflow: hidden;
+            position: relative;
+        }
+        .header {
+            background-color: #ffdddd;
+            height: 150px;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            position: relative;
+            z-index: -1;
+        }
+        .content {
+            padding: 20px;
+            position: relative;
+            height: calc(100vh - 200px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -50px; /* Moves everything up */
+        }
+        .image1 {
+            width: 55%;
+            max-width: 2500px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transform: rotate(-10deg);
+            position: absolute;
+            top: -50px; /* Moves image up */
+            right: 25px;
+           
+        }
+        .image2 {
+            width: 55%;
+            max-width: 2300px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transform: rotate(6deg);
+            position: absolute;
+            bottom: 70px; /* Moves image up */
+            left: 20px;
+        }
+        @keyframes pop-up {
+            from {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes hover {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        .text {
+            color: #b3003b;
+            font-size: 24px;
+            padding: 20px;
+            line-height: 1.6;
+            max-width: 80%;
+            position: absolute;
+            bottom: 280px;
+            animation: pop-up 1.5s ease-out forwards, hover 3s infinite ease-in-out;
+            opacity: 0;
+            
+        }
+        .button-container {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+            left: 120px;
+            
+        }
+        .next-button {
+            background-color: #42b8dd;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="content">
+        <img src="/images/thiyagrad.jpg" alt="Inspirational Image 1" class="image1">
+        <p class="text">I am so proud of you baby, <br>your drive, <br> and the determination to stick to that drive is just so inspiring to me!</p>
+        <img src="/images/thiya.jpg" alt="Inspirational Image 2" class="image2">
+    </div>
+    <div class="button-container">
+        <a href="game.html" class="next-button">Show your skills</a>
+    </div>
+</body>
+</html>
